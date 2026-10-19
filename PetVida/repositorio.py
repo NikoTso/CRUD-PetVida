@@ -1,6 +1,6 @@
 
 import pyodbc
-from PetVida.db import conectar, transacao
+from db import conectar, transacao
 
 # TRATAMENTO DE ERROS
 
@@ -102,7 +102,7 @@ def listar_tutores(filtro_nome=None):
                 SELECT id_tutor, nome, cpf, email, telefone
                 FROM dbo.tutor
                 WHERE nome LIKE ?
-            """, (f"%{filtro_nome}%",))
+            """, ("Nome: ",filtro_nome,))
 
         else:
             cursor.execute("""
