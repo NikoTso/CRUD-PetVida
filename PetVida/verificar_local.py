@@ -1,7 +1,7 @@
 
-from PetVida.db import testar_conexao
+from db import testar_conexao
 
-from PetVida.repositorio import (
+from repositorio import (
     buscar_tutor,
     listar_tutores,
     listar_pets_do_tutor,
